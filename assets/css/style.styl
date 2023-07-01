@@ -1,37 +1,94 @@
 @font-face 
-    font-family: "Fraunces"
-    src: url(../fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf)
+    font-family: 'Fraunces'
+    src: url(../fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf) format('truetype')
 
 @font-face 
-    font-family: "Manrope"
-    src: url(../fonts/manrope/Manrope-VariableFont_wght.ttf)
+    font-family: 'Manrope'
+    src: url(../fonts/manrope/Manrope-VariableFont_wght.ttf) format('truetype')
 
 heading_L()
-    font "Fraunces", sans-serif
-    font-size: 80px
-    line-height: 80px
-    font-weight: 600
+    font-family: 'Fraunces', sans-serif
+    font-size: clamp(36px, 9vw,65px)
+    line-height: 1
+    font-weight: 500
 
 heading_M()
-    font "Fraunces", sans-serif
+    font-family: 'Fraunces', sans-serif
     font-size: 56px
-    line-height: 64px
+    line-height: 1.8
     font-weight: 600
 
 heading_M()
-    font "Fraunces", sans-serif
+    font-family: 'Fraunces', sans-serif
     font-size: 32px
-    line-height: 40px
+    line-height: 1.8
     font-weight: 600
 
 body_text()
-    font "Manrope"
-    font-size: 18px
-    line-height: 32px
+    font-family: 'Manrope', sans-serif
+    font-size: clamp(16px,1vw,18px)
+    line-height: 1.6
+    font-weight: 500
 
 dark-purple = #24053E
 davy-grey = #584D62
 eucaplyptus = #44FFA1
 ghost-white = #FCF8FF
 white = #FFFFFF
+body
+    margin: 0
+header
+    background: dark-purple
+    height: 100vh //failsafe incase svh is not supported
+    height: 100svh
+    display: flex
+    justify-content: space-between
+    flex-direction: column
 
+nav
+    display: flex
+    justify-content: space-between 
+    img
+        max-width: 95px
+    button
+        body_text()
+        font-weight: bold
+        background-color: dark-purple
+        color: white
+        cursor: pointer
+        transition-duration: 0.5s
+        padding: 0
+        padding-bottom: 4px
+        border: none
+        border-bottom: 3px solid eucaplyptus
+        &:hover
+            color: eucaplyptus
+    padding-top: 40px
+    padding-left: 15px
+    padding-right: 15px
+#slogan
+    display: flex
+    flex-direction: column
+    h1
+        heading_L()
+        text-align: center
+        margin: 0
+        color white
+    button
+        body_text()
+        margin-top: 30px
+        margin-left: auto
+        margin-right: auto
+        background-color: eucaplyptus
+        color: dark-purple
+        cursor: pointer
+        transition-duration: 0.5s
+        padding: 10px
+        padding-left: 20px
+        padding-right: 20px
+        border: 2px solid eucaplyptus
+        font-weight: bold
+        &:hover
+            color: eucaplyptus
+            background-color: dark-purple
+    
