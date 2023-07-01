@@ -8,6 +8,8 @@
 }
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 header {
   background: #24053e;
@@ -79,4 +81,26 @@ nav button:hover {
 #slogan button:hover {
   color: #44ffa1;
   background-color: #24053e;
+}
+#image-container {
+  position: relative;
+  background-color: #fcf8ff;
+  height: 10vh;
+}
+#image-container .custom-shape-divider-bottom-1688220562 {
+  position: absolute;
+  bottom: 9.8vh;
+  left: -20%;
+  width: 120%;
+  overflow: hidden;
+  line-height: 0;
+}
+#image-container .custom-shape-divider-bottom-1688220562 svg {
+  position: relative;
+  display: block;
+  width: 120%;
+  height: 95px;
+}
+#image-container .custom-shape-divider-bottom-1688220562 .shape-fill {
+  fill: #fcf8ff;
 }
