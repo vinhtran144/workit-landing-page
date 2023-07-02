@@ -20,7 +20,7 @@ heading_M()
 
 heading_S()
     font-family: 'Fraunces', sans-serif
-    font-size: clamp(20px,1vw,32px)
+    font-size: clamp(20px,3vw,32px)
     line-height: 1.8
     font-weight: 600
 
@@ -187,20 +187,28 @@ header
         padding-right: 10vw
         // gap: 0px 100px
         flex-direction: column
+        @media (min-width:500px) and (max-width 768px)
+            flex-direction: row
     .number-part
         // flex-grow: 1
         heading_S()
-        flex: 0 0 calc(clamp(20px,1vw,32px)*2)
-        width: calc(clamp(20px,1vw,32px)*2)
-        height: calc(clamp(20px,1vw,32px)*2)
+        flex: 0 0 calc(clamp(20px,3vw,32px)*2)
+        width: calc(clamp(20px,3vw,32px)*2)
+        height: calc(clamp(20px,3vw,32px)*2)
         border-radius: 50%
         text-align: center
         border: 2px solid dark-purple
+        @media (min-width:500px) and (max-width 768px)
+            align-self: flex-start
+            margin-top:60px
     .letter-part
         // max-width: 400px
+        text-align: center
         h2
             heading_S()
-            text-align: center
         p 
             body_text()
-            text-align: center
+        @media (min-width:500px) and (max-width 768px)
+            padding-left: 5vw
+            text-align: left
+        

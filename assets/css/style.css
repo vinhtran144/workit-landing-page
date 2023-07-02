@@ -214,29 +214,47 @@ header {
   padding-right: 10vw;
   flex-direction: column;
 }
+@media (min-width: 500px) and (max-width: 768px) {
+  #body-container .part-wrapper {
+    flex-direction: row;
+  }
+}
 #body-container .number-part {
   font-family: 'Fraunces', sans-serif;
-  font-size: clamp(20px, 1vw, 32px);
+  font-size: clamp(20px, 3vw, 32px);
   line-height: 1.8;
   font-weight: 600;
-  flex: 0 0 calc(clamp(20px, 1vw, 32px) * 2);
-  width: calc(clamp(20px, 1vw, 32px) * 2);
-  height: calc(clamp(20px, 1vw, 32px) * 2);
+  flex: 0 0 calc(clamp(20px, 3vw, 32px) * 2);
+  width: calc(clamp(20px, 3vw, 32px) * 2);
+  height: calc(clamp(20px, 3vw, 32px) * 2);
   border-radius: 50%;
   text-align: center;
   border: 2px solid #24053e;
 }
+@media (min-width: 500px) and (max-width: 768px) {
+  #body-container .number-part {
+    align-self: flex-start;
+    margin-top: 60px;
+  }
+}
+#body-container .letter-part {
+  text-align: center;
+}
 #body-container .letter-part h2 {
   font-family: 'Fraunces', sans-serif;
-  font-size: clamp(20px, 1vw, 32px);
+  font-size: clamp(20px, 3vw, 32px);
   line-height: 1.8;
   font-weight: 600;
-  text-align: center;
 }
 #body-container .letter-part p {
   font-family: 'Manrope', sans-serif;
   font-size: clamp(16px, 1vw, 18px);
   line-height: 1.6;
   font-weight: 500;
-  text-align: center;
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  #body-container .letter-part {
+    padding-left: 5vw;
+    text-align: left;
+  }
 }
