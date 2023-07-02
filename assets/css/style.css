@@ -60,9 +60,6 @@ header {
   max-width: 1110px;
   padding: 40px 15px 0;
 }
-#logo-container img {
-  max-width: 95px;
-}
 @media (min-width: 768px) {
   #logo-container {
     padding: 40px 50px 0;
@@ -137,18 +134,12 @@ header {
   }
 }
 .pos3 {
-  transform: scale(0.7);
-  bottom: -40%;
-  right: 0;
+  bottom: -20%;
+  right: 5%;
 }
 @media (max-width: 768px) {
   .pos3 {
     opacity: 0;
-  }
-}
-@media (min-width: 992px) {
-  .pos3 {
-    bottom: -60%;
   }
 }
 #image-container {
@@ -291,24 +282,19 @@ header {
 .letter-part {
   text-align: center;
 }
-.letter-part p {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(16px, 1vw, 18px);
-  line-height: 1.6;
-  font-weight: 500;
-  max-width: 400px;
-}
 @media (min-width: 500px) and (max-width: 992px) {
   .letter-part {
     text-align: left;
     padding-left: 5vw;
   }
-  .letter-part p {
+}
+@media (min-width: 500px) and (max-width: 992px) {
+  .card-content {
     max-width: 700px;
   }
 }
 @media (min-width: 993px) and (max-width: 1400px) {
-  .letter-part p {
+  .card-content {
     max-width: 290px;
   }
 }
@@ -334,7 +320,7 @@ header {
   width: 90vw;
   max-width: 1150px;
   height: 650px;
-  margin: 100px auto;
+  margin: 100px auto 70px;
 }
 @media (min-width: 320px) {
   #bio-container {
@@ -351,6 +337,12 @@ header {
     height: 575px;
   }
 }
+#bio-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 .bio-tilte {
   margin: 0;
   font-family: 'Fraunces', sans-serif;
@@ -359,11 +351,18 @@ header {
   font-weight: 500;
   color: #fff;
 }
-#bio-card {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.bio-content {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(16px, 1vw, 18px);
+  line-height: 1.6;
+  font-weight: 500;
+  color: #fff;
+  padding: 0 5vw;
+}
+@media (min-width: 1400px) {
+  .bio-content {
+    padding-left: 72px;
+  }
 }
 #bio-info {
   text-align: center;
@@ -377,14 +376,6 @@ header {
   min-height: 55%;
   width: 100%;
   padding: 30px 0 20px;
-}
-#bio-info p {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(16px, 1vw, 18px);
-  line-height: 1.6;
-  font-weight: 500;
-  color: #fff;
-  padding: 0 5vw;
 }
 @media (min-width: 768px) {
   #bio-info {
@@ -407,10 +398,32 @@ header {
   #bio-info .square-btn {
     margin-left: 72px;
   }
-  #bio-info p {
-    padding-left: 72px;
-  }
   #bio-info .bio-tilte {
     padding-left: 72px;
   }
+}
+footer {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.link-btn {
+  background-color: #fff;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.link-btn .icon-link {
+  fill: #584d62;
+  transition-duration: 0.5s;
+}
+.link-btn:hover .icon-link {
+  fill: #24053e;
 }
