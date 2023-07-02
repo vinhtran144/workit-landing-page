@@ -40,6 +40,7 @@ header {
   font-size: clamp(16px, 1vw, 18px);
   line-height: 1.6;
   font-weight: 500;
+  z-index: 10;
   margin: 30px auto;
   background-color: #44ffa1;
   color: #24053e;
