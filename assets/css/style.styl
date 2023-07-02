@@ -41,8 +41,6 @@ body
     box-sizing: border-box
 header
     background: dark-purple
-    // height: 100vh //failsafe incase svh is not supported
-    // height: 100svh
     display: flex
     justify-content: space-between
     flex-direction: column
@@ -79,14 +77,44 @@ header
     @media (min-width:992)
         padding-left: 100px
         padding-right: 100px 
+      
 #slogan
     display: flex
     flex-direction: column
+    overflow: hidden
     h1
         heading_L()
         text-align: center
         margin: 0
         color white
+        span
+            position: relative
+            .underline
+                width: 100%
+                position: absolute
+                bottom: 0.6vw
+                left: 0
+                border-bottom: 3px solid eucaplyptus
+    #slogan-container
+        position: relative
+        .bg-pattern
+            position: absolute
+            @media (max-width:576px)
+                opacity: 0
+        .pos1
+            left:-30vw
+            top:-30%
+            @media (min-width:992px)
+                left: -10vw
+            @media (min-width:1400px)
+                left: 10vw
+        .pos2
+            right:-10vw
+            bottom:-110%
+            @media (min-width:992px)
+                right: 0
+            @media (min-width:1400px)
+                right: 10vw
     #learn-btn
         body_text()
         margin-top: 30px
