@@ -78,7 +78,10 @@ header {
   flex-direction: column;
   overflow: hidden;
 }
-h1 {
+#slogan-container {
+  position: relative;
+}
+.slogan-title {
   font-family: 'Fraunces', sans-serif;
   font-size: clamp(36px, 9vw, 80px);
   line-height: 1;
@@ -87,18 +90,15 @@ h1 {
   margin: 0;
   color: #fff;
 }
-h1 span {
+.slogan-title span {
   position: relative;
 }
-h1 span .underline {
+.slogan-title span .underline {
   width: 100%;
   position: absolute;
   bottom: 0.6vw;
   left: 0;
   border-bottom: 3px solid #44ffa1;
-}
-#slogan-container {
-  position: relative;
 }
 .bg-pattern {
   position: absolute;
@@ -134,6 +134,21 @@ h1 span .underline {
 @media (min-width: 1400px) {
   .pos2 {
     right: 10vw;
+  }
+}
+.pos3 {
+  transform: scale(0.7);
+  bottom: -40%;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .pos3 {
+    opacity: 0;
+  }
+}
+@media (min-width: 992px) {
+  .pos3 {
+    bottom: -60%;
   }
 }
 #image-container {
@@ -236,7 +251,7 @@ h1 span .underline {
     padding: 4vh 15vw 5vh;
   }
 }
-.part-wrapper {
+.card-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,11 +259,11 @@ h1 span .underline {
   flex-direction: column;
 }
 @media (min-width: 500px) and (max-width: 992px) {
-  .part-wrapper {
+  .card-wrapper {
     flex-direction: row;
   }
 }
-h3 {
+.card-title {
   font-family: 'Fraunces', sans-serif;
   font-size: clamp(20px, 3vw, 32px);
   line-height: 1.8;
@@ -284,6 +299,10 @@ h3 {
   max-width: 400px;
 }
 @media (min-width: 500px) and (max-width: 992px) {
+  .letter-part {
+    text-align: left;
+    padding-left: 5vw;
+  }
   .letter-part p {
     max-width: 700px;
   }
@@ -293,10 +312,20 @@ h3 {
     max-width: 290px;
   }
 }
-@media (min-width: 500px) and (max-width: 992px) {
-  .letter-part {
-    padding-left: 5vw;
-    text-align: left;
+#portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90vw;
+  max-width: 280px;
+}
+@media (min-width: 768px) {
+  #portrait {
+    width: 35vw;
+    max-width: 477px;
+    margin: 0;
   }
 }
 #bio-container {
@@ -307,15 +336,6 @@ h3 {
   height: 650px;
   margin: 100px auto;
 }
-#bio-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 90vw;
-  max-width: 280px;
-}
 @media (min-width: 320px) {
   #bio-container {
     height: 600px;
@@ -325,18 +345,13 @@ h3 {
   #bio-container {
     height: 525px;
   }
-  #bio-container img {
-    width: 35vw;
-    max-width: 477px;
-    margin: 0;
-  }
 }
 @media (min-width: 992px) {
   #bio-container {
     height: 575px;
   }
 }
-h2 {
+.bio-tilte {
   margin: 0;
   font-family: 'Fraunces', sans-serif;
   font-size: clamp(25px, 8vw, 48px);
@@ -345,21 +360,25 @@ h2 {
   color: #fff;
 }
 #bio-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#bio-info {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #24053e;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  position: relative;
+  overflow: hidden;
   margin: 0 auto;
   min-height: 55%;
   width: 100%;
   padding: 30px 0 20px;
 }
-#bio-card p {
+#bio-info p {
   font-family: 'Manrope', sans-serif;
   font-size: clamp(16px, 1vw, 18px);
   line-height: 1.6;
@@ -368,30 +387,30 @@ h2 {
   padding: 0 5vw;
 }
 @media (min-width: 768px) {
-  #bio-card {
+  #bio-info {
     width: 70vw;
     max-width: 750px;
     margin: 0 0 0 auto;
     text-align: left;
   }
-  #bio-card .square-btn {
+  #bio-info .square-btn {
     margin-left: 5vw;
   }
-  #bio-card h2 {
+  #bio-info .bio-tilte {
     padding-left: 5vw;
   }
 }
 @media (min-width: 1400px) {
-  #bio-card {
+  #bio-info {
     max-height: 450px;
   }
-  #bio-card .square-btn {
+  #bio-info .square-btn {
     margin-left: 72px;
   }
-  #bio-card p {
+  #bio-info p {
     padding-left: 72px;
   }
-  #bio-card h2 {
+  #bio-info .bio-tilte {
     padding-left: 72px;
   }
 }

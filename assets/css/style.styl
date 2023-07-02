@@ -115,7 +115,9 @@ header
     display: flex
     flex-direction: column
     overflow: hidden
-h1
+#slogan-container
+    position: relative
+.slogan-title
     heading_L()
     text-align: center
     margin: 0
@@ -128,8 +130,6 @@ h1
             bottom: 0.6vw
             left: 0
             border-bottom: 3px solid eucaplyptus
-#slogan-container
-    position: relative
 .bg-pattern
     position: absolute
     @media (max-width:576px)
@@ -149,6 +149,14 @@ h1
     @media (min-width:1400px)
         right: 10vw
 
+.pos3
+    transform: scale(0.7)
+    bottom: -40%
+    right:0
+    @media (max-width 768px)
+        opacity 0
+    @media (min-width 992px)
+        bottom: -60%
 #image-container
     position: relative
     margin-top: 15px
@@ -188,7 +196,7 @@ h1
         padding: 4vh 0 5vh
     @media (min-width:2000px)
         padding: 4vh 15vw 5vh
-.part-wrapper
+.card-wrapper
     display:flex
     justify-content: center
     align-items: center
@@ -197,7 +205,7 @@ h1
     @media (min-width:500px) and (max-width 992px)
         flex-direction: row
     
-h3
+.card-title
     heading_S()
     font-size: clamp(20px,2.7vw,32px)
 .number-part
@@ -213,19 +221,32 @@ h3
         margin-top:60px
     
 .letter-part
-    // max-width: 400px
     text-align: center
-    p 
-        body_text()
-        max-width: 400px
-        @media (min-width:500px) and (max-width 992px)
-            max-width: 700px
-        @media (min-width:993px) and (max-width 1400px)
-            max-width: 290px
-        
     @media (min-width:500px) and (max-width 992px)
-        padding-left: 5vw
         text-align: left
+        padding-left: 5vw 
+    @media (min-width:993px) and (max-width 1400px)
+
+.card-content
+    body_text()
+        max-width: 400px
+    @media (min-width:500px) and (max-width 992px)
+        max-width: 700px 
+    @media (min-width:993px) and (max-width 1400px)
+        max-width: 290px
+
+#portrait
+    position: absolute
+    top: 0
+    left:0
+    right 0
+    margin: 0 auto
+    width: 90vw
+    max-width: 280px   
+    @media(min-width:768px)
+        width: 35vw
+        max-width: 477px
+        margin:0
 
 #bio-container
     background-color: white
@@ -234,50 +255,43 @@ h3
     max-width: 1150px
     height: 650px
     margin: 100px auto 
-    img
-        position: absolute
-        top: 0
-        left:0
-        right 0
-        margin: 0 auto
-        width: 90vw
-        max-width: 280px   
     @media(min-width:320px)
         height: 600px
     @media(min-width:768px)
         height: 525px
-        img
-            width: 35vw
-            max-width: 477px
-            margin:0
     @media(min-width 992px)
         height: 575px
+#bio-card
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
 
-h2 
+.bio-tilte
  margin 0
  heading_M()
  color: white
 
-#bio-card
+.bio-content
+    body_text()
+    color: white
+    padding: 0 5vw
+    @media(min-width:1400px)
+        padding-left: 72px
+
+
+#bio-info
     text-align: center
     display: flex
     flex-direction: column
     justify-content: space-between
     background-color: dark-purple
-    position: absolute
-    bottom: 0
-    right: 0
-    left: 0
+    position: relative
+    overflow: hidden
     margin: 0 auto
     min-height 55%
     width: 100%
     padding: 30px 0 20px
-    // width: 60vw
-    // max-width:750px
-    p
-        body_text()
-        color: white
-        padding: 0 5vw
     @media(min-width:768px)
         width: 70vw
         max-width:750px
@@ -285,16 +299,13 @@ h2
         text-align: left
         .square-btn
             margin-left: 5vw
-            
-        h2 
+        .bio-tilte 
             padding-left: 5vw
     @media(min-width:1400px)
         max-height: 450px
         .square-btn
             margin-left: 72px
-        p
-            padding-left: 72px
-        h2 
+        .bio-tilte
             padding-left: 72px
 
 
