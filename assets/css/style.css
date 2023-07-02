@@ -303,9 +303,9 @@ h3 {
   background-color: #fff;
   position: relative;
   width: 90vw;
-  max-width: 1110px;
+  max-width: 1150px;
   height: 650px;
-  margin: 0 auto 100px;
+  margin: 100px auto;
 }
 #bio-container img {
   position: absolute;
@@ -319,6 +319,21 @@ h3 {
 @media (min-width: 320px) {
   #bio-container {
     height: 600px;
+  }
+}
+@media (min-width: 768px) {
+  #bio-container {
+    height: 525px;
+  }
+  #bio-container img {
+    width: 35vw;
+    max-width: 477px;
+    margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  #bio-container {
+    height: 575px;
   }
 }
 h2 {
@@ -351,4 +366,32 @@ h2 {
   font-weight: 500;
   color: #fff;
   padding: 0 5vw;
+}
+@media (min-width: 768px) {
+  #bio-card {
+    width: 70vw;
+    max-width: 750px;
+    margin: 0 0 0 auto;
+    text-align: left;
+  }
+  #bio-card .square-btn {
+    margin-left: 5vw;
+  }
+  #bio-card h2 {
+    padding-left: 5vw;
+  }
+}
+@media (min-width: 1400px) {
+  #bio-card {
+    max-height: 450px;
+  }
+  #bio-card .square-btn {
+    margin-left: 72px;
+  }
+  #bio-card p {
+    padding-left: 72px;
+  }
+  #bio-card h2 {
+    padding-left: 72px;
+  }
 }
