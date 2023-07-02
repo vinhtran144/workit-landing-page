@@ -179,16 +179,30 @@ header
     background-color: ghost-white
     padding-top: 40px
     color:dark-purple
+    padding-left: 10vw
+    padding-right: 10vw
+    display:flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    @media (min-width:993px)
+        align-items: flex-start
+        flex-direction: row
+        padding-left: 0
+        padding-right: 0
     .part-wrapper
         display:flex
         justify-content: center
         align-items: center
-        padding-left: 10vw
-        padding-right: 10vw
+        margin-top: 2vh
+        margin-bottom: 2vh
         // gap: 0px 100px
         flex-direction: column
-        @media (min-width:500px) and (max-width 768px)
+        max-width: 300px
+        @media (min-width:500px) and (max-width 992px)
+            max-width: 700px
             flex-direction: row
+        
     .number-part
         // flex-grow: 1
         heading_S()
@@ -198,17 +212,21 @@ header
         border-radius: 50%
         text-align: center
         border: 2px solid dark-purple
-        @media (min-width:500px) and (max-width 768px)
+        @media (min-width:500px) and (max-width 992px)
             align-self: flex-start
             margin-top:60px
+        
     .letter-part
         // max-width: 400px
         text-align: center
         h2
             heading_S()
+            font-size: clamp(20px,2.7vw,32px)
         p 
             body_text()
-        @media (min-width:500px) and (max-width 768px)
+            
+        @media (min-width:500px) and (max-width 992px)
             padding-left: 5vw
+            
             text-align: left
         

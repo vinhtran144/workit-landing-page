@@ -205,17 +205,33 @@ header {
   background-color: #fcf8ff;
   padding-top: 40px;
   color: #24053e;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 993px) {
+  #body-container {
+    align-items: flex-start;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 #body-container .part-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   flex-direction: column;
+  max-width: 300px;
 }
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 992px) {
   #body-container .part-wrapper {
+    max-width: 700px;
     flex-direction: row;
   }
 }
@@ -231,7 +247,7 @@ header {
   text-align: center;
   border: 2px solid #24053e;
 }
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 992px) {
   #body-container .number-part {
     align-self: flex-start;
     margin-top: 60px;
@@ -245,6 +261,7 @@ header {
   font-size: clamp(20px, 3vw, 32px);
   line-height: 1.8;
   font-weight: 600;
+  font-size: clamp(20px, 2.7vw, 32px);
 }
 #body-container .letter-part p {
   font-family: 'Manrope', sans-serif;
@@ -252,7 +269,7 @@ header {
   line-height: 1.6;
   font-weight: 500;
 }
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 992px) {
   #body-container .letter-part {
     padding-left: 5vw;
     text-align: left;
