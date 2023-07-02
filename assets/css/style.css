@@ -201,3 +201,42 @@ header {
     padding-left: 20px;
   }
 }
+#body-container {
+  background-color: #fcf8ff;
+  padding-top: 40px;
+  color: #24053e;
+}
+#body-container .part-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  flex-direction: column;
+}
+#body-container .number-part {
+  font-family: 'Fraunces', sans-serif;
+  font-size: clamp(20px, 1vw, 32px);
+  line-height: 1.8;
+  font-weight: 600;
+  flex: 0 0 calc(clamp(20px, 1vw, 32px) * 2);
+  width: calc(clamp(20px, 1vw, 32px) * 2);
+  height: calc(clamp(20px, 1vw, 32px) * 2);
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid #24053e;
+}
+#body-container .letter-part h2 {
+  font-family: 'Fraunces', sans-serif;
+  font-size: clamp(20px, 1vw, 32px);
+  line-height: 1.8;
+  font-weight: 600;
+  text-align: center;
+}
+#body-container .letter-part p {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(16px, 1vw, 18px);
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+}

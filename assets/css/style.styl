@@ -18,9 +18,9 @@ heading_M()
     line-height: 1.8
     font-weight: 600
 
-heading_M()
+heading_S()
     font-family: 'Fraunces', sans-serif
-    font-size: 32px
+    font-size: clamp(20px,1vw,32px)
     line-height: 1.8
     font-weight: 600
 
@@ -173,3 +173,34 @@ header
         @media (min-width:1200px)
             width: 770px   
             padding-left: 20px  
+
+
+#body-container 
+    background-color: ghost-white
+    padding-top: 40px
+    color:dark-purple
+    .part-wrapper
+        display:flex
+        justify-content: center
+        align-items: center
+        padding-left: 10vw
+        padding-right: 10vw
+        // gap: 0px 100px
+        flex-direction: column
+    .number-part
+        // flex-grow: 1
+        heading_S()
+        flex: 0 0 calc(clamp(20px,1vw,32px)*2)
+        width: calc(clamp(20px,1vw,32px)*2)
+        height: calc(clamp(20px,1vw,32px)*2)
+        border-radius: 50%
+        text-align: center
+        border: 2px solid dark-purple
+    .letter-part
+        // max-width: 400px
+        h2
+            heading_S()
+            text-align: center
+        p 
+            body_text()
+            text-align: center
