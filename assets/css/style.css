@@ -282,22 +282,25 @@ header {
 }
 .letter-part {
   text-align: center;
+  max-width: 400px;
 }
 @media (min-width: 500px) and (max-width: 992px) {
   .letter-part {
+    max-width: 700px;
     text-align: left;
     padding-left: 5vw;
   }
 }
-@media (min-width: 500px) and (max-width: 992px) {
-  .card-content {
-    max-width: 700px;
-  }
-}
 @media (min-width: 993px) and (max-width: 1400px) {
-  .card-content {
+  .letter-part {
     max-width: 290px;
   }
+}
+.card-content {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(16px, 1vw, 18px);
+  line-height: 1.6;
+  font-weight: 500;
 }
 #portrait {
   position: absolute;
