@@ -43,7 +43,7 @@ custom-bottom-divier(y-offset, fill-color)
             position: relative;
             display: block;
             width: 120%;
-            height: 95px;
+            height: 20vw;
         .shape-fill 
             fill: fill-color;  
     .divider-spacer
@@ -178,14 +178,24 @@ header
 #body-container 
     background-color: ghost-white
     color:dark-purple
-    padding: 4vh 10vw 5vh
+    
     
     position relative
     custom-bottom-divier(0%, white)
+    overflow: auto
+    // @media (min-width:993px)
+        // align-items: flex-start
+        // flex-direction: row
+        
+    
+
+.card-groups
+    margin-bottom: 10vw
     display:flex
     flex-direction: column
     justify-content: space-evenly
     align-items: center
+    padding: 4vh 10vw 5vh
     @media (min-width:993px)
         align-items: flex-start
         flex-direction: row

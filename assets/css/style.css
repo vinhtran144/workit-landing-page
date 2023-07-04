@@ -163,7 +163,7 @@ header {
   position: relative;
   display: block;
   width: 120%;
-  height: 95px;
+  height: 20vw;
 }
 #image-container .custom-shape-divider-bottom-1688220562 .shape-fill {
   fill: #fcf8ff;
@@ -200,12 +200,8 @@ header {
 #body-container {
   background-color: #fcf8ff;
   color: #24053e;
-  padding: 4vh 10vw 5vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  overflow: auto;
 }
 #body-container .custom-shape-divider-bottom-1688220562 {
   position: absolute;
@@ -219,7 +215,7 @@ header {
   position: relative;
   display: block;
   width: 120%;
-  height: 95px;
+  height: 20vw;
 }
 #body-container .custom-shape-divider-bottom-1688220562 .shape-fill {
   fill: #fff;
@@ -231,15 +227,23 @@ header {
   width: 100%;
   background: #fff;
 }
+.card-groups {
+  margin-bottom: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4vh 10vw 5vh;
+}
 @media (min-width: 993px) {
-  #body-container {
+  .card-groups {
     align-items: flex-start;
     flex-direction: row;
     padding: 4vh 0 5vh;
   }
 }
 @media (min-width: 2000px) {
-  #body-container {
+  .card-groups {
     padding: 4vh 15vw 5vh;
   }
 }
